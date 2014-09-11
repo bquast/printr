@@ -10,7 +10,7 @@
 
 <meta name="author" content="Yihui Xie" />
 
-<meta name="date" content="2014-09-09" />
+<meta name="date" content="2014-09-11" />
 
 <title>An Introduction to The printr Package</title>
 
@@ -43,7 +43,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="header">
 <h1 class="title">An Introduction to The printr Package</h1>
 <h4 class="author"><em>Yihui Xie</em></h4>
-<h4 class="date"><em>2014-09-09</em></h4>
+<h4 class="date"><em>2014-09-11</em></h4>
 </div>
 
 <div id="TOC">
@@ -750,36 +750,18 @@ table(x1)</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">MSG</td>
-<td align="left">ChinaPop</td>
-<td align="left">demo</td>
-<td align="left">symbols characterizing the Chinese population based on a contour plot</td>
-</tr>
-<tr class="even">
-<td align="left">MSG</td>
-<td align="left">contourPop</td>
-<td align="left">demo</td>
-<td align="left">a contour plot of the data ChinaLifeEdu</td>
-</tr>
-<tr class="odd">
-<td align="left">MSG</td>
-<td align="left">volcano</td>
-<td align="left">demo</td>
-<td align="left">a filled contour plot of the volcano data</td>
-</tr>
-<tr class="even">
 <td align="left">graphics</td>
 <td align="left">filled.contour</td>
 <td align="left">help</td>
 <td align="left">Level (Contour) Plots</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">lattice</td>
 <td align="left">levelplot</td>
 <td align="left">help</td>
 <td align="left">Level plots and contour plots</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">lattice</td>
 <td align="left">panel.levelplot</td>
 <td align="left">help</td>
@@ -1210,7 +1192,7 @@ Description:
 Package:           printr
 Type:              Package
 Title:             Print R objects according to the knitr output format
-Version:           0.0.0
+Version:           0.0.1
 Date:              2014-09-04
 Author:            Yihui Xie
 Maintainer:        Yihui Xie &lt;xie@yihui.name&gt;
@@ -1219,14 +1201,14 @@ Description:       This package extends the S3 generic function knit_print() in 
                    Markdown or LaTeX. For example, data frames are automatically printed
                    as tables, and the help() pages can also be rendered in knitr
                    documents.
-Imports:           knitr
-Suggests:          tools
+Imports:           knitr (&gt;= 1.6.18)
+Suggests:          tools, rmarkdown
 License:           GPL
 URL:               http://yihui.name/printr
 BugReports:        https://github.com/yihui/printr/issues
 VignetteBuilder:   knitr
 LazyData:          TRUE
-Built:             R 3.1.1; ; 2014-09-09 05:45:46 UTC; unix
+Built:             R 3.1.1; ; 2014-09-11 07:51:49 UTC; unix
 
 Index:
 
