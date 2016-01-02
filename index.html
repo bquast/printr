@@ -10,7 +10,7 @@
 
 <meta name="author" content="Yihui Xie" />
 
-<meta name="date" content="2015-10-30" />
+<meta name="date" content="2016-01-02" />
 
 <title>An Introduction to The printr Package</title>
 
@@ -72,7 +72,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="header">
 <h1 class="title">An Introduction to The printr Package</h1>
 <h4 class="author"><em>Yihui Xie</em></h4>
-<h4 class="date"><em>2015-10-30</em></h4>
+<h4 class="date"><em>2016-01-02</em></h4>
 </div>
 
 <div id="TOC">
@@ -91,13 +91,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>The <strong>printr</strong> (read “printer” or “print R”) package is a companion package to <a href="http://yihui.name/knitr"><strong>knitr</strong></a>. Its main purpose is to extend the S3 generic function <code>knit_print()</code> in <strong>knitr</strong>, which is the default value of the chunk option <code>render</code>, as explained in the vignette <a href="http://cran.rstudio.com/web/packages/knitr/vignettes/knit_print.html">knit_print.html</a>.</p>
 <div id="overview" class="section level1">
 <h1><span class="header-section-number">1</span> Overview</h1>
-<p>To enable the printing methods defined in this package, just <code>library(printr)</code> in a code chunk (in the beginning) of your <strong>knitr</strong> document. Then some objects will be printed differently with what you would have seen in a normal R console. For example:</p>
+<p>To enable the printing methods defined in this package, just <code>library(printr)</code> or <code>loadNamespace('printr')</code> in a code chunk (in the beginning) of your <strong>knitr</strong> document. Then some objects will be printed differently with what you would have seen in a normal R console. For example:</p>
 <ul>
 <li>matrices, data frames, and contingency tables are printed as tables (LaTeX, HTML, or Markdown, depending on your output format)</li>
 <li>the help page (from <code>?foo</code> or <code>help(foo)</code>) can be rendered as HTML, LaTeX, or plain text, and you can also specify which section(s) of the help page to include in the output</li>
 <li>the results from <code>browseVignettes()</code>, <code>help.search()</code>, <code>data()</code>, and <code>vignette()</code> are rendered as tables</li>
 <li>the package information from <code>library(help = 'foo')</code> is rendered as plain text</li>
 </ul>
+<p>To disable the printing methods in this package, you can call <code>detach('package:printr', unload = TRUE)</code> if you <em>attached</em> the package via <code>library(printr)</code> before, or <code>unloadNamespace('printr')</code> if you <em>loaded</em> it via <code>loadNamespace('printr')</code>.</p>
 <p>This package aims to be portable in the sense that it should work in most document formats, including <code>*.Rnw</code> (R + LaTeX), <code>*.Rmd</code> (R Markdown), and <code>*.Rhtml</code> (R + HTML) files, etc.</p>
 <p>You can find the package source on <a href="https://github.com/yihui/printr">Github</a>, and you are welcome to contribute code via pull requests, or file feature requests and bug reports via <a href="https://github.com/yihui/printr/issues">Github issues</a>.</p>
 </div>
@@ -1188,24 +1189,23 @@ Description:
 Package:           printr
 Type:              Package
 Title:             Automatically Print R Objects According to knitr Output Format
-Version:           0.0.4
+Version:           0.0.5
 Date:              2014-09-04
 Author:            Yihui Xie
 Maintainer:        Yihui Xie &lt;xie@yihui.name&gt;
-Description:       This package extends the S3 generic function knit_print() in knitr to
-                   automatically print some objects using an appropriate format such as
-                   Markdown or LaTeX. For example, data frames are automatically printed
-                   as tables, and the help() pages can also be rendered in knitr
-                   documents.
-Imports:           knitr (&gt;= 1.6.18)
+Description:       Extends the S3 generic function knit_print() in knitr to automatically
+                   print some objects using an appropriate format such as Markdown or
+                   LaTeX. For example, data frames are automatically printed as tables,
+                   and the help() pages can also be rendered in knitr documents.
+Imports:           knitr (&gt;= 1.11)
 Suggests:          tools, rmarkdown
 License:           GPL
 URL:               http://yihui.name/printr
 BugReports:        https://github.com/yihui/printr/issues
 VignetteBuilder:   knitr
 LazyData:          TRUE
-RoxygenNote:       5.0.0
-Built:             R 3.2.2; ; 2015-10-30 03:14:05 UTC; unix
+RoxygenNote:       5.0.1
+Built:             R 3.2.3; ; 2016-01-02 22:57:24 UTC; unix
 
 Index:
 
